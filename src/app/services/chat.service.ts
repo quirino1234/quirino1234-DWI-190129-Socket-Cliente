@@ -13,9 +13,13 @@ export class ChatService {
   {
     const payload = {
       de: 'Eleazar',
-      cuerpo: mensaje
+      cuerpo: mensaje,
+      color: 'aqua'
     };
 
     this.wsService.emit('mensaje', payload);
+  }
+  getMessages(){
+   return this.wsService.listen('mensaje-nuevo');
   }
 }
