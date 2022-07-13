@@ -8,6 +8,9 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { environment } from '../environments/environment';
 import { FooterComponent } from './components/footer/footer.component';
 import { ChatComponent } from './components/chat/chat.component';
+import { ListUsuariosComponent } from './components/list-usuarios/list-usuarios.component';
+import { LoginComponent } from './pages/login/login.component';
+import { MensajesComponent } from './pages/mensajes/mensajes.component';
 const config: SocketIoConfig = {
   url:environment.wsUrl, options:{}
 }
@@ -15,13 +18,17 @@ const config: SocketIoConfig = {
   declarations: [
     AppComponent,
     FooterComponent,
-    ChatComponent
+    ChatComponent,
+    ListUsuariosComponent,
+    LoginComponent,
+    MensajesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     SocketIoModule.forRoot(config),
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
