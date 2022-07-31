@@ -1,19 +1,15 @@
 <h1>Usuarios</h1>
 <hr>
 
-
 <ul class="list-group">
-    <li class="list-group-item"
-    *ngFor="let usuario of usuariosActivosObs | async">
+    <li class="list-group-item" *ngFor="let usuario of usuariosActivosObs | async">
     {{ usuario.nombre }}
-    <span class="badge badge-primary">
+    <span>
         {{usuario.sala }}
     </span>
     <br>
-    <span class="badge badge-info">
+    <span>
         {{ usuario.id }}
     </span>
 </li>
 </ul>
-
-{{ usuariosActivosObs | async}}
