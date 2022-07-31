@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./list-usuarios.component.css']
 })
 export class ListUsuariosComponent implements OnInit {
-  usuariosActivosObs!: Observable<any>;
+  usuariosActivosObs?: Observable  <any>;
+
   constructor(
     public ChatService: ChatService
   ) { }

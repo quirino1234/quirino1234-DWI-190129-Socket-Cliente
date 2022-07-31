@@ -23,7 +23,7 @@ export class WebsocketService {
       console.log('conectado al servidor');
       this.socketStatus = true;
       this.cargarStorage();
-    })
+    });
 
     this.socket.on('disconnect', () => {
       console.log('Desconectado del servidor');
@@ -60,14 +60,14 @@ export class WebsocketService {
   )}
 
   logoutWS() {
-    this.usuario = null;
+    this.usuario == null;
     localStorage.removeItem('usuario');
 
     const payload = {
       nombre: 'sin-nombre'
     };
 
-    this.emit('configurar-usuario', payload,  );
+    this.emit('configurar-usuario', payload, () => {} );
     this.router.navigateByUrl('');
 
   }

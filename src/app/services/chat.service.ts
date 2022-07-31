@@ -33,8 +33,8 @@ export class ChatService {
       return this.wsService.listen( 'usuarios-activos' );
     }
 
-    emitirUsuariosActivos() {
-      this.wsService.emit('obtener-usuarios');
+    emitirUsuariosActivos(){
+      this.wsService.listen( 'obtener-usuarios' );
     }
 
 }
